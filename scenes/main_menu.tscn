@@ -1,0 +1,71 @@
+[gd_scene load_steps=6 format=3 uid="uid://cdgwjualpvnd5"]
+
+[ext_resource type="Script" uid="uid://dwu10s8gnpud2" path="res://scripts/main_menu.gd" id="1_l6cm7"]
+[ext_resource type="Texture2D" uid="uid://kc313cuhgpu3" path="res://sprites/b126c20c9e42fdf51942a0d5375e565b (1).png" id="2_8ln24"]
+[ext_resource type="Texture2D" uid="uid://cmfmi1wq8p81l" path="res://sprites/tile_0063.png" id="3_rtw2f"]
+[ext_resource type="Texture2D" uid="uid://bta0esswu72nq" path="res://sprites/tile_0061.png" id="4_oa1go"]
+[ext_resource type="Texture2D" uid="uid://3irws3mctrse" path="res://sprites/tile_0060.png" id="5_tbmy8"]
+
+[node name="Main menu" type="Node2D"]
+script = ExtResource("1_l6cm7")
+
+[node name="button_manager" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Start" type="Button" parent="button_manager"]
+layout_mode = 0
+offset_left = 272.0
+offset_top = 112.0
+offset_right = 496.0
+offset_bottom = 160.0
+text = "Start"
+
+[node name="Credit" type="Button" parent="button_manager"]
+layout_mode = 0
+offset_left = 272.0
+offset_top = 192.0
+offset_right = 496.0
+offset_bottom = 240.0
+text = "Credit"
+
+[node name="Exite" type="Button" parent="button_manager"]
+layout_mode = 0
+offset_left = 272.0
+offset_top = 272.0
+offset_right = 496.0
+offset_bottom = 320.0
+text = "Exit"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+zoom = Vector2(1.7, 1.7)
+
+[node name="B126c20c9e42Fdf51942a0d5375e565b(1)" type="Sprite2D" parent="."]
+position = Vector2(637.67474, 245.96036)
+rotation = 0.5923679
+scale = Vector2(2.5751753, 2.5751753)
+texture = ExtResource("2_8ln24")
+
+[node name="Tile0063" type="Sprite2D" parent="."]
+position = Vector2(160, 128)
+rotation = -0.37890285
+scale = Vector2(6.5, 6.5)
+texture = ExtResource("3_rtw2f")
+
+[node name="Tile0061" type="Sprite2D" parent="."]
+position = Vector2(604, 76)
+scale = Vector2(4.5, 4.5)
+texture = ExtResource("4_oa1go")
+
+[node name="Tile0060" type="Sprite2D" parent="."]
+position = Vector2(176, 352)
+rotation = 2.5101144
+scale = Vector2(5.5, 5.5)
+texture = ExtResource("5_tbmy8")
+
+[connection signal="pressed" from="button_manager/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="button_manager/Credit" to="." method="_on_credit_pressed"]
+[connection signal="pressed" from="button_manager/Exite" to="." method="_on_exite_pressed"]

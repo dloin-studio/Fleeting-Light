@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://7jl8vuvfs0h"]
+
+[ext_resource type="Script" uid="uid://vofek8srrnsg" path="res://scripts/credit.gd" id="1_5egdn"]
+[ext_resource type="Texture2D" uid="uid://bhjmkmcwihppf" path="res://sprites/Add a heading.png" id="1_kmqx5"]
+
+[node name="Credit" type="Node2D"]
+script = ExtResource("1_5egdn")
+
+[node name="AddAHeading" type="Sprite2D" parent="."]
+position = Vector2(375, 214.99997)
+scale = Vector2(0.4039885, 0.41296297)
+texture = ExtResource("1_kmqx5")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+zoom = Vector2(1.7, 1.7)
+
+[node name="Button" type="Button" parent="."]
+offset_left = 306.0
+offset_top = 328.0
+offset_right = 414.0
+offset_bottom = 365.0
+text = "Back"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
